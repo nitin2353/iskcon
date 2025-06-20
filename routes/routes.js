@@ -108,7 +108,7 @@ router.post('/loginYouthData', async(req, res) => {
 
 var beats = 0;
 router.post('/chantingupdate', async (req, res) => {
-    console.log(req.body.counting);
+    //console.log(req.body.counting);
     try{
         let chant = await User.findOne({phone : req.session.mobile});
         if(chant.count == 108){

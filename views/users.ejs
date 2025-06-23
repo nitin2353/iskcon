@@ -36,11 +36,14 @@
                 let profile = document.createElement('img');
                 profile.src = `../users_img/${element.image}`;
                 profile.setAttribute('id', "pro_img");
-                let name = document.createElement('h2');
+                let name = document.createElement('h4');
                 name.innerHTML = element.name;
-                let  mala = document.createElement('h2');
+                let phone = document.createElement('h4');
+                phone.className = "user_phone";
+                phone.innerHTML = element.phone;
+                let  mala = document.createElement('h4');
                 mala.innerHTML = element.mala_count;
-                mala.style="right: 0; margin-right: 40px;";
+                mala.style="right: 0; font-size: 24px; margin-right: 40px;";
                 if(i<=3){
                     rank = document.createElement('img');
                     rank.src=`../images/rank${i}.png`
@@ -51,6 +54,7 @@
 
                 user.appendChild(profile)
                 user.appendChild(name)
+                user.appendChild(phone)
                 user.appendChild(mala)
                 users.appendChild(user)
             });

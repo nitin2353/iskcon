@@ -1,6 +1,10 @@
 *{
     user-select: none;
 }
+
+body{
+    overflow: hidden;
+}
 .navbar{
     background-color: #094BA0 !important;
     color: white !important;
@@ -42,6 +46,8 @@
     justify-content: center !important; /* Centers horizontally */
     align-items: center !important;
 }
+
+
 
 #goFull{
     z-index: 10;
@@ -350,37 +356,45 @@ center{
     margin-left: 10px;
 }
 
-.user h2{
+.user h4{
     position: absolute;
     display: inline;
     margin-left: 20px;
     margin-top: 5px;
     color: black;
+    font-size: 15px;
+    font-weight: 500 !important;
+}
+.user_phone{
+    margin-top: 25px !important;
 }
 
 .rank1{
-    height: 60px;
-    width: 60px;
-    margin-top: -10px;
-    margin-right: 90px;
+    height: 40px;
+    width: 40px;
+    margin-top: 11px;
+    margin-right: 130px !important;
     position: absolute;
     right: 0 !important;
+    z-index: 6;
 }
 .rank2{
-    height: 60px;
-    width: 60px;
-    margin-top: -10px;
-    margin-right: 90px;
+    height: 40px;
+    width: 40px;
+    margin-top: 13px;
+    margin-right: 130px !important;
     position: absolute;
     right: 0 !important;
+    z-index: 6;
 }
 .rank3{
-    height: 60px;
-    width: 60px;
-    margin-top: -10px;
-    margin-right: 90px;
+    height: 40px;
+    width: 40px;
+    margin-top: 13px;
+    margin-right: 130px !important;
     position: absolute;
     right: 0 !important;
+    z-index: 6;
 }
 
 .sign_btn{

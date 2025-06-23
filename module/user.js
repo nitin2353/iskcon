@@ -8,7 +8,8 @@ const userSchema = new mongoose.Schema({
   password: String,
   date: Date,
   count: Number,
-  mala_count: Number
+  mala_count: Number,
+  total_mala: Number
 });
 
 

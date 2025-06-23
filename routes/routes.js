@@ -7,7 +7,7 @@ const User = require('../module/user');
 
 // Session Setup
 router.use(session({
-    secret: process.env.SECRET,
+    secret: "SECRETKEY",
     resave: false,
     saveUninitialized: false,
     cookie: {

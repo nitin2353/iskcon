@@ -20,11 +20,14 @@ document.addEventListener('DOMContentLoaded', () => {
     .then(response => response.json())
     .then(data => {
         mala.innerHTML = data[0].mala_count;
+        // Use fetched mala_count and count from localStorage to set total correctly
+        const malaCount = parseInt(data[0].mala_count) || 0;
+        const localCount = parseInt(localStorage.getItem('count')) || 0;
         total.innerHTML = (NaN)? 0 : data[0].mala_count * 108 + parseInt(localStorage.getItem('count')); 
-        window.localStorage.setItem('count', data[0].count)
+        window.localStorage.setItem('count', data[0].count);
+        counting.innerHTML = data[0].count;
+        count = data[0].count;
     })
-    counting.innerHTML = localStorage.getItem('count');
-    count = localStorage.getItem('count');
 })
 
 

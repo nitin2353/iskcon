@@ -67,7 +67,7 @@ router.post('/signupYouthData', async (req, res) => {
     try {
         const newUser = new User({
             name: req.body.name,
-            // image: req.file.filename, 
+            image: "req.file.filename", 
             phone: req.body.phone,
             password: req.body.password,
             date: Date.now(),

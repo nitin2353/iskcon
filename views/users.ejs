@@ -47,12 +47,10 @@
                     for(let i = 0; i < 10; i++){
                         if(i >= 7 && i <=10){
                             sec_phn += 'X';
-                            
                         }
                         else{
                             let st_ph = org_ph.toString();
-                            sec_phn += st_ph[i];
-                            
+                            sec_phn += st_ph[i];    
                         }
                     }
                 return sec_phn;
@@ -68,6 +66,13 @@
                     rank.src=`../images/rank${i}.png`
                     rank.setAttribute('id', "pro_img")
                     rank.className=`rank${i}`
+                    user.appendChild(rank)
+                }else
+                {
+                    rank = document.createElement('img');
+                    rank.src=`../images/ques.png`
+                    rank.setAttribute('id', "pro_img")
+                    rank.className=`rank_ques`
                     user.appendChild(rank)
                 }
 

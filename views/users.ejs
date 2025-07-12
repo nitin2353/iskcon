@@ -41,7 +41,25 @@
                 name.innerHTML = element.name;
                 let phone = document.createElement('h4');
                 phone.className = "user_phone";
-                phone.innerHTML = element.phone;
+
+                function secure(org_ph) {
+                    let sec_phn = '';
+                    for(let i = 0; i < 10; i++){
+                        if(i >= 7 && i <=10){
+                            sec_phn += 'X';
+                            
+                        }
+                        else{
+                            let st_ph = org_ph.toString();
+                            sec_phn += st_ph[i];
+                            
+                        }
+                    }
+                return sec_phn;
+                }
+
+
+                phone.innerHTML = secure(element.phone);
                 let  mala = document.createElement('h4');
                 mala.innerHTML = element.mala_count;
                 mala.style="right: 0; font-size: 24px; margin-right: 40px;";

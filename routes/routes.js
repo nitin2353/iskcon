@@ -51,25 +51,23 @@ router.get('/myDetail', async (req, res) => {
 });
 
 // -------------------- Sign Up --------------------
-const storage = multer.diskStorage({
-    destination: (req, file, cb) => {
-        cb(null, path.join(__dirname, '../users_img'));
-    },
-    filename: (req, file, cb) => {
-        const filename = `${Date.now()}-${file.originalname}`;
-        cb(null, filename);
-    }
-});
+// const storage = multer.diskStorage({
+//     destination: (req, file, cb) => {
+//         cb(null, path.join(__dirname, '../users_img'));
+//     },
+//     filename: (req, file, cb) => {
+//         const filename = `${Date.now()}-${file.originalname}`;
+//         cb(null, filename);
+//     }
+// });
 
-const upload = multer({ storage: storage });
-
-router.post('/signupYouthData', upload.single('photo'), async (req, res) => {
+// const upload = multer({ storage: storage });
+// , upload.single('photo')
+router.post('/signupYouthData', async (req, res) => {
     try {
-
-
         const newUser = new User({
             name: req.body.name,
-            image: req.file.filename, 
+            // image: req.file.filename, 
             phone: req.body.phone,
             password: req.body.password,
             date: Date.now(),
